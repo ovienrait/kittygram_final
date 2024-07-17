@@ -17,6 +17,8 @@ services:
     volumes:
       - static:/backend_static
       - media:/media
+    depends_on:
+      - db
   frontend:
     image: nirendsound/kittygram_frontend
     env_file: .env
